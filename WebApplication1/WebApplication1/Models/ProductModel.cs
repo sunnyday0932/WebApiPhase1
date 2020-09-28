@@ -10,7 +10,7 @@ namespace WebApplication1.Models
         /// <summary>
         /// 商品流水號
         /// </summary>
-        public int ProductID { get; set; }
+        public int? ProductID { get; set; }
 
         /// <summary>
         /// 商品名稱

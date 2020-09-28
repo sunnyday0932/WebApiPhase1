@@ -41,7 +41,7 @@ namespace WebApplication1.Repositories
         /// </summary>
         /// <param name="productModel"></param>
         /// <returns></returns>
-        public bool InsertProduct([FromBody] ProductModel productModel)
+        public bool CreateProduct(ProductModel productModel)
         {
             var sql = @"INSERT INTO products
                                 (productname,
@@ -76,7 +76,7 @@ namespace WebApplication1.Repositories
 
             var connection = new SqlConnection(ConnectionHelper.ConnectionStr);
 
-            var result = connection.Execute(sql);
+            var result = connection.Execute(sql, parameters);
 
             return result > 0;
         }
