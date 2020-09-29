@@ -5,9 +5,16 @@ using WebApplication1.Repositories;
 
 namespace WebApplication1.Controllers
 {
+    /// <summary>
+    /// 商品
+    /// </summary>
     [Route("api/")]
     public class ProductContorller : ControllerBase
     {
+        /// <summary>
+        /// 取得商品列表
+        /// </summary>
+        /// <returns></returns>
         [Route("Product")]
         [HttpGet]
         public IEnumerable<ProductModel> GetProductList()
@@ -18,6 +25,11 @@ namespace WebApplication1.Controllers
             return result;
         }
 
+        /// <summary>
+        /// 新增商品
+        /// </summary>
+        /// <param name="productModel"></param>
+        /// <returns></returns>
         [Route("Product")]
         [HttpPost]
         public ResultModel CreateProduct([FromBody] ProductModel productModel)

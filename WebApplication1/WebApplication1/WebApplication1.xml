@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication1</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication1.Controllers.ProductContorller">
+            <summary>
+            商品
+            </summary>
+        </member>
+        <member name="M:WebApplication1.Controllers.ProductContorller.GetProductList">
+            <summary>
+            取得商品列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.ProductContorller.CreateProduct(WebApplication1.Models.ProductModel)">
+            <summary>
+            新增商品
+            </summary>
+            <param name="productModel"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.ProductID">
+            <summary>
+            商品流水號
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.ProductName">
+            <summary>
+            商品名稱
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.SupplierID">
+            <summary>
+            供應商ID
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.CategoryID">
+            <summary>
+            種類ID
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.QuantityPerUnit">
+            <summary>
+            每單位數量
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.UnitPrice">
+            <summary>
+            每單位價格
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.UnitsInStock">
+            <summary>
+            每單位稅額
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.UnitsOnOrder">
+            <summary>
+            每單位訂購價
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.ReorderLevel">
+            <summary>
+            重新訂購等級
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ProductModel.Discontinued">
+            <summary>
+            是否已停產
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ResultModel.Result">
+            <summary>
+            結果
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.ResultModel.Message">
+            <summary>
+            提示訊息
+            </summary>
+        </member>
+        <member name="F:WebApplication1.Repositories.ConnectionHelper._connectionStr">
+            <summary>
+            連線字串
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Repositories.ConnectionHelper.ConnectionStr">
+            <summary>
+            資料庫連線
+            </summary>
+        </member>
+        <member name="M:WebApplication1.Repositories.ProductRepository.GetProductList">
+            <summary>
+            取得產品列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Repositories.ProductRepository.CreateProduct(WebApplication1.Models.ProductModel)">
+            <summary>
+            新增一筆商品
+            </summary>
+            <param name="productModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Repositories.ProductRepository.UpdateProduct(WebApplication1.Models.ProductModel)">
+            <summary>
+            修改商品內容
+            </summary>
+            <param name="productModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Repositories.ProductRepository.RemoveProduct(System.Int32)">
+            <summary>
+            刪除指定的商品
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
