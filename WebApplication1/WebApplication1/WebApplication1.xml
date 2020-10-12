@@ -22,6 +22,25 @@
             <param name="productModel"></param>
             <returns></returns>
         </member>
+        <member name="M:WebApplication1.Controllers.ProductContorller.UpdateProduct(WebApplication1.Models.ProductModel)">
+            <summary>
+            修改商品
+            </summary>
+            <param name="productModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.ProductContorller.RemoveProduct(System.Int32)">
+            <summary>
+            刪除指定商品
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplication1.Models.ProductModel">
+            <summary>
+            ProductModel
+            </summary>
+        </member>
         <member name="P:WebApplication1.Models.ProductModel.ProductID">
             <summary>
             商品流水號
@@ -70,6 +89,11 @@
         <member name="P:WebApplication1.Models.ProductModel.Discontinued">
             <summary>
             是否已停產
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Models.ResultModel">
+            <summary>
+            ResultModel
             </summary>
         </member>
         <member name="P:WebApplication1.Models.ResultModel.Result">

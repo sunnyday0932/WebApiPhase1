@@ -98,7 +98,7 @@ namespace WebApplication1.Repositories
                                unitsonorder = @UnitsOnOrder,
                                reorderlevel = @ReorderLevel,
                                discontinued = @Discontinued
-                        WHERE productid = @ProductID";
+                        WHERE productid = @ProductID ";
 
             var parameters = new DynamicParameters();
             parameters.Add("@ProductName", productModel.ProductName);
@@ -114,7 +114,9 @@ namespace WebApplication1.Repositories
 
             var connection = new SqlConnection(ConnectionHelper.ConnectionStr);
 
-            var result = connection.Execute(sql);
+            var result = connection.Execute(
+                sql,
+                parameters);
 
             return result > 0;
         }
@@ -129,12 +131,14 @@ namespace WebApplication1.Repositories
             var sql = @"DELETE products
                         WHERE  productid = @ProductID ";
 
-            var parameters = new DynamicParameters();
-            parameters.Add("@ProductID", productId);
+            var parameter = new DynamicParameters();
+            parameter.Add("@ProductID", productId);
 
             var connection = new SqlConnection(ConnectionHelper.ConnectionStr);
 
-            var result = connection.Execute(sql);
+            var result = connection.Execute(
+                sql,
+                parameter);
 
             return result > 0;
         }

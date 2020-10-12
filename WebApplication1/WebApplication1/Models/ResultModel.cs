@@ -1,5 +1,8 @@
 ﻿namespace WebApplication1.Models
 {
+    /// <summary>
+    /// ResultModel
+    /// </summary>
     public class ResultModel
     {
         /// <summary>

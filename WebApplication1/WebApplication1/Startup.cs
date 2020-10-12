@@ -30,15 +30,17 @@ namespace WebApplication1
         {
             services.AddControllers();
 
-            services.AddSwaggerGen(options =>
+            services.AddSwaggerGen(c =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiPhase1", Version = "v1" });
-                // 取得xml文件名稱
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                // 取得xml path
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                // 顯示controller註解
-                options.IncludeXmlComments(xmlPath, true);
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiPhase1", Version = "v1" });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFiles = Directory.EnumerateFiles(AppContext.BaseDirectory, "*.xml", SearchOption.TopDirectoryOnly);
+
+                foreach (var xmlFile in xmlFiles)
+                {
+                    c.IncludeXmlComments(xmlFile);
+                }
             });
         }
 

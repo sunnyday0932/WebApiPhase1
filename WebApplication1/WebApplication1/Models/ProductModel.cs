@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
+    /// <summary>
+    /// ProductModel
+    /// </summary>
     public class ProductModel
     {
         /// <summary>
