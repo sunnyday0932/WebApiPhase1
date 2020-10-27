@@ -86,7 +86,7 @@ namespace WebApplication1.Controllers
         /// </summary>
         /// <param name="productId"></param>
         /// <returns></returns>
-        [Route("Product")]
+        [Route("Product/{productId}")]
         [HttpDelete]
         public ResultModel RemoveProduct(int productId)
         {
